@@ -10,8 +10,8 @@ const PokemonCard=()=>{
 
     const pokemon = pokemonList[0] 
     return (
-    <figure className="card_img"> {pokemon.imgSrc ? <img src={pokemon.imgSrc} alt={pokemon.name}/> : <p>"???"</p>}
-    <figcaption>{pokemon.name}</figcaption>
+    <figure className="card"> {pokemon.imgSrc ? <img className="card_img" src={pokemon.imgSrc} alt={pokemon.name}/> : <p>"???"</p>}
+    <figcaption className="cardText">{pokemon.name}</figcaption>
     </figure>)
     }
 
