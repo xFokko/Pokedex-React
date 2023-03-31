@@ -3,7 +3,7 @@ const PokemonCard=({ pokemon })=>{
 
     PokemonCard.PropTypes={
         pokemon: PropTypes.shape({
-            name: PropTypes.string.isRequired,
+            name: PropTypes.string.isequired,
             imgSrc: PropTypes.string.isRequired
           }),
     }
