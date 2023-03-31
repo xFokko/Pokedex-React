@@ -36,6 +36,11 @@
   }
 }
 
+.card:hover {
+  transform: scale(1.05);
+  transition: 0.7s;
+}
+
 .card {
   border: 1.5px solid rgb(6, 90, 6);
   border-radius: 7px;
