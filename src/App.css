@@ -21,18 +21,16 @@
 }
 
 @keyframes logo-spin {
-  from {
+  0% {
     transform: translateY(0);
   }
 
-  to {
+  50% {
     transform: translateY(-10px);
   }
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+  100% {
+    transform: translateY(0);
   }
 }
 
@@ -43,7 +41,7 @@ body {
 .card:hover {
   /* transform: scale(1.05); */
   transition: 0.7s;
-  animation: logo-spin 1s linear;
+  animation: logo-spin 1s linear infinite;
 }
 
 .card {
@@ -55,12 +53,13 @@ body {
   background: rgb(20, 74, 20);
   display: flex;
   flex-direction: column;
-  gap: 2.5em;
+  gap: 5%;
 
 }
 
 .card_img {
   width: 100%;
+  height: 80%;
   background: rgb(68, 116, 63);
   border: solid 0.1px rgb(68, 116, 63);
   border-radius: 7px 7px 0 0;
