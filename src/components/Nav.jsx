@@ -22,7 +22,7 @@ const handleClick = () => {
 return(
 
     <div>
-<button onClick={handleClick}>{list}</button>
+<button className=".button" onClick={handleClick}>{list}</button>
    </div>)};
 
 
