@@ -1,6 +1,6 @@
-import React, { useEffect } from "react";
 
-const Nav=({setter, getter,list })=>{
+
+const Nav=({setpokemonIndex, pokemonIndex,list})=>{
 
 // data------------------------------/
 
@@ -10,14 +10,11 @@ const Nav=({setter, getter,list })=>{
 // changement state / fonction -------/
 
 
-const handleAdd = () => {
-    setter(getter + 1)
-  };
+const handleClick = () => {
+    setpokemonIndex(pokemonIndex)
+    list === "- pikachu -" ? alert('pika pika nigga !'):"";
 
-  const handleLess = () => {
-    setter(getter -1);
   };
-
 
 
 // render ------------------------------/
@@ -25,8 +22,7 @@ const handleAdd = () => {
 return(
 
     <div>
-{getter > 0 && <button onClick={handleLess}>Previous</button>}
-{getter < list.length - 1 && <button onClick={handleAdd}>Next</button>}
+<button onClick={handleClick}>{list}</button>
    </div>)};
 
 

@@ -37,7 +37,6 @@ const App = () => {
 
     const [pokemonIndex, setPokemonIndex] = useState(0);
 
-    const pokemon = pokemonList[pokemonIndex];
 
     useEffect(
       () => {
@@ -45,20 +44,26 @@ const App = () => {
       },
       []
     );
-    
-    pokemonList[pokemonIndex].name === "- pikachu -" ? alert("Pika, pikachuuuuu!!") : "";  
   
   
 
 
 // /-----------------------------render 
 return (
-  <div>
-    <PokemonCard pokemon={pokemon} />
+  <div className="CardButtonContainer">
+    <PokemonCard pokemon={pokemonList[pokemonIndex]} />
+
+    <div className="buttonContainer">
+      
+    {pokemonList.map((pokemon,index)=>(
     <Nav
-    list={pokemonList}
-    setter= {setPokemonIndex} 
-    getter={pokemonIndex}/>
+    key={pokemon.name}
+    list={pokemonList[index].name}
+    pokemonIndex={index}
+    setpokemonIndex={setPokemonIndex}
+    />))}
+
+    </div>
   </div>
 );
 };
