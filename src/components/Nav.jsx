@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 const Nav=({setter, getter,list })=>{
 
@@ -19,13 +19,15 @@ const handleAdd = () => {
   };
 
 
+
 // render ------------------------------/
+
 return(
 
     <div>
 {getter > 0 && <button onClick={handleLess}>Previous</button>}
 {getter < list.length - 1 && <button onClick={handleAdd}>Next</button>}
-   </div>)}
-;
+   </div>)};
+
 
 export default Nav

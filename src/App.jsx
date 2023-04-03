@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { useState } from 'react'
 import './App.css'
 import PokemonCard from './components/PokemonCard'
@@ -36,9 +37,16 @@ const App = () => {
 
     const [pokemonIndex, setPokemonIndex] = useState(0);
 
-
-  
     const pokemon = pokemonList[pokemonIndex];
+
+    useEffect(
+      () => {
+       alert("hello pokemon trainer ヾ(＠⌒ー⌒＠)ノ");
+      },
+      []
+    );
+    
+    pokemonList[pokemonIndex].name === "- pikachu -" ? alert("Pika, pikachuuuuu!!") : "";  
   
   
 
